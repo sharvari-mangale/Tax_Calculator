@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4"><b>Tax Calculator</b></h1>
+    <form id="taxForm">
+        <div class="form-group">
+            <label for="income">Gross Annual Income:</label>
+            <input type="number" class="form-control" id="income" placeholder="Enter income">
+            <span class="error-icon" data-toggle="tooltip" data-placement="right" title=""></span>
+        </div>
+        <div class="form-group">
+            <label for="extraIncome">Extra Income:</label>
+            <input type="number" class="form-control" id="extraIncome" placeholder="Enter extra income">
+            <span class="error-icon" data-toggle="tooltip" data-placement="right" title=""></span>
+        </div>
+        <div class="form-group">
+            <label for="deductions">Deductions:</label>
+            <input type="number" class="form-control" id="deductions" placeholder="Enter deductions">
+            <span class="error-icon" data-toggle="tooltip" data-placement="right" title=""></span>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <select class="form-control" id="age">
+                <option value="<40">&lt; 40</option>
+                <option value="≥40 & <60">&ge; 40 &lt; 60</option>
+                <option value="≥60">&ge; 60</option>
+            </select>
+            <span class="error-icon" data-toggle="tooltip" data-placement="right" title=""></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate Tax</button>
+    </form>
+</div>
+
+<div class="modal" id="resultModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Your overall income will be</h5>
+            </div>
+            
+            <div class="modal-body" id="resultBody">
+        
+            </div>
+            <button type="submit" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script> 
+
+</body>
+</html>

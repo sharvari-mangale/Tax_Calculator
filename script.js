@@ -30,10 +30,10 @@ $(document).ready(function() {
         return tax;
     }
 
-        function numberWithCommas(x) {
+    function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    
+
     $('#taxForm').submit(function(event) {
         event.preventDefault();
 
@@ -74,7 +74,9 @@ $(document).ready(function() {
            
             $('#resultBody').html('<p>Tax amount: ' + numberWithCommas(tax.toFixed(2)) + ' Lakhs</p>' +
                       '<p>After tax deductions</p>');
+
             $('#resultModal').modal('show');
+        
         }
     });
 

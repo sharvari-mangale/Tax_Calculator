@@ -30,6 +30,10 @@ $(document).ready(function() {
         return tax;
     }
 
+        function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    
     $('#taxForm').submit(function(event) {
         event.preventDefault();
 
@@ -68,8 +72,8 @@ $(document).ready(function() {
             // Calculate tax
             var tax = calculateTax(income, extraIncome, deductions, age);
            
-            $('#resultBody').html(tax.toFixed(2)+
-                                 '<p>After tax deductions</p>');
+            $('#resultBody').html('<p>Tax amount: ' + numberWithCommas(tax.toFixed(2)) + ' Lakhs</p>' +
+                      '<p>After tax deductions</p>');
             $('#resultModal').modal('show');
         }
     });
